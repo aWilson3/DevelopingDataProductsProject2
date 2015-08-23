@@ -1,0 +1,43 @@
+Pitch for my App
+========================================================
+author: Alex Hegeman
+date: August 23, 2015
+
+Your Problem
+========================================================
+
+You've got a problem. You are trying to impress someone who is a sports junkie. However, you don't know much about sports. Being able to talk somewhat intelligently about some major league sport will really help you out with this person.
+
+
+My Solution
+========================================================
+
+You're in luck! There is now an extremely user friendly web app to help you impress your friends! Using an estimated guess of the number of runs a MLB team will score and allow (which can be easily found on many popular websites), you can now predict the number of games that team will win and lose in the upcoming season.
+
+The Proof is in the Pudding!
+========================================================
+Our App makes use of the well-known method of calculating win percentage dubbed the **Pythagorean Theorem**. The equation looks like this:
+$$\frac{RS^2}{RS^2 + RA^2}$$
+where RS and RA are runs scored and runs allowe. In our App, we have adjusted the exponents to a value of 1.81, which has shown to be more accurate. Let's look at an example:
+```{r, echo=TRUE}
+
+RS = 649
+RA = 498
+
+winPercent <- function(RS, RA){
+  return(RS^1.81/(RS^1.81 + RA^1.81))
+}
+
+winPercent(RS, RA)
+
+```
+
+So, we expect this team to win just under 62% of their games.
+Conclusion
+=================================
+
+Not only does our exciting new App calculate expected win percentage; it will also translate this percentage into an actual number of expected wins and losses for your team!
+
+No longer must you dread those sports conversations when they come up. With this new App, you will be able to show off and impressive even the most ardent sports fans! So what are you waiting for?? Visit the link below to get started now!
+
+https://aWilson3.shinyapps.io/DevelopingDataProductsProject
